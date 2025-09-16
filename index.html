@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ludo - 2/3/4 Player</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <div id="app-root">
+        <div id="menu-screen" class="screen">
+            <h1 class="title">Ludo</h1>
+            <div class="menu">
+                <button id="btn-play" class="primary">Play</button>
+                <button id="btn-exit" class="secondary">Exit</button>
+            </div>
+        </div>
+
+        <div id="mode-screen" class="screen hidden">
+            <h2>Select Players</h2>
+            <div class="menu">
+                <button class="mode-btn" data-players="2">Two Players</button>
+                <button class="mode-btn" data-players="3">Three Players</button>
+                <button class="mode-btn" data-players="4">Four Players</button>
+            </div>
+            <button id="btn-back-menu" class="secondary small">Back</button>
+        </div>
+
+        <div id="game-screen" class="screen hidden">
+            <div class="top-bar">
+                <div class="status">
+                    <span id="current-player-indicator"></span>
+                    <span id="dice-result"></span>
+                </div>
+                <div class="controls">
+                    <button id="btn-roll" class="primary">Roll Dice</button>
+                    <button id="btn-restart" class="secondary">Restart</button>
+                    <button id="btn-quit" class="secondary">Quit</button>
+                </div>
+            </div>
+            <div class="board-wrapper">
+                <canvas id="board-canvas" width="720" height="720"></canvas>
+            </div>
+            <div id="help-text" class="help"></div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <noscript>This app requires JavaScript enabled.</noscript>
+</body>
+</html>
+
