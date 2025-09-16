@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ludo</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="menuOverlay" class="overlay">
+        <div class="card">
+          <h1 class="title">Ludo</h1>
+          <div class="actions">
+            <button id="playBtn" class="btn primary">Play</button>
+            <button id="exitBtn" class="btn">Exit</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="modeOverlay" class="overlay hidden">
+        <div class="card">
+          <h2 class="subtitle">Select Players</h2>
+          <div class="actions">
+            <button data-players="2" class="btn primary">2 Players</button>
+            <button data-players="3" class="btn primary">3 Players</button>
+            <button data-players="4" class="btn primary">4 Players</button>
+          </div>
+          <button id="backToMenuBtn" class="btn link">Back</button>
+        </div>
+      </div>
+
+      <div id="gameUI" class="hidden">
+        <div class="topbar">
+          <div class="left">
+            <span id="currentPlayerBadge" class="badge">Player</span>
+          </div>
+          <div class="center">
+            <button id="rollBtn" class="btn primary">Roll Dice</button>
+            <span id="diceValue" class="dice">-</span>
+          </div>
+          <div class="right">
+            <button id="restartBtn" class="btn">Restart</button>
+            <button id="quitBtn" class="btn">Quit</button>
+          </div>
+        </div>
+        <div class="board-wrap">
+          <canvas id="board" width="720" height="720"></canvas>
+        </div>
+        <div id="message" class="message"></div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+  </html>
+
